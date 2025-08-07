@@ -165,5 +165,49 @@ Processing: 100%|█████████████████████
 +------------+------------+------------------+----------------------------------------+-----------------------------------+-----------+--------------------+-----------+-----------+------------------+------+-----------+
 ```
 
+## 📦 Requirements
+
+This project relies on the following Python packages, pinned in `requirements.txt`:
+
+```text
+chardet==5.2.0
+exceptiongroup==1.3.0
+iniconfig==2.1.0
+packaging==25.0
+pluggy==1.6.0
+Pygments==2.19.2
+pytest==8.4.1
+tabulate==0.9.0
+tomli==2.2.1
+tqdm==4.67.1
+typing_extensions==4.14.1
+```
+
+---
+
+### Installation
+
+1. **Create (or activate) a virtual environment**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate
+   ```
+
+2. **Save the list above** into a file named `requirements.txt`.
+
+3. **Install dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Verify installation**
+
+   ```bash
+   pip list
+   ```
+
+You’re now ready to run the tool!
 
 
