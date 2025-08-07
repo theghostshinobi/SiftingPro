@@ -132,4 +132,38 @@ python cli_runner.py ./my_project -f table -f csv -f json
   * `report.csv` file (`csv`)
   * `report.json` file (`json`)
   * ASCII tree in console (`tree`)
+  * 
+
+
+  OUTPUT:
+```bash
+(venv) (base) ➜ toolkit python cli_runner.py /path/to/project -f table
+Processing: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:34<00:00,  5.80s/step]
+2025-08-07 12:13:07,104 INFO:
++------------+---------+--------------------------------+
+| Phase      | Status  | Details                        |
++------------+---------+--------------------------------+
+| Crawl      | OK      | 93 files found                 |
+| Parse      | OK      | 37149 nodes extracted          |
+| Map        | OK      | 1561 functions mapped          |
+| CallGraph  | OK      | 10 definitions, 17501 unmatched|
+| Check      | OK      | 1285 unused, 39 mismatches     |
+| Report     | OK      | Report generated               |
++------------+---------+--------------------------------+
+
+
+| #  | Type       | Function         | Def. File                             | File Dates                       | Def. Line | Signature | Call File | Call Line | Call Args | Lang | Status    |
+|    |            |                  |                                        |                                   |           |           |           |           |           |      |           |
+| Row index | Definition or Call | Function name  | Path to definition file               | Modified & Created               | Def. line | Declared signature | Call file | Call line | Arguments passed | Language (py/php) | OK or MISMATCH |
++____________+____________________+__________________+________________________________________+___________________________________+___________+____________________+___________+___________+__________________+________________+____________+
+| 1  | definition | default_config   | /path/to/project/utils/db/Example.py  | Mod: 29-10-2024; Cr: 25-07-2025  | 8         | (self)    |           |           |                  | py   | OK         |
+|    |            |                  |                                        |                                   |           |           |           |           |           |      |            |
+|    |            |                  | /path/to/project/utils/db/ExampleAid.py|                                   |           |           |           |           |           |      |            |
+| 2  | definition | config_filename  | /path/to/project/config/Settings.py    | Mod: 29-10-2024; Cr: 25-07-2025  | 18        | (self)    |           |           |                  | py   | OK         |
+|    |            |                  |                                        |                                   |           |           |           |           |           |      |            |
+|    |            |                  | /path/to/project/config/SettingsExtra.py|                                  |           |           |           |           |           |      |            |
++------------+------------+------------------+----------------------------------------+-----------------------------------+-----------+--------------------+-----------+-----------+------------------+------+-----------+
+```
+
+
 
